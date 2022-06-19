@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center py-5">Lista de tareas</h1>
+
+    <main class="container mx-auto">
+        <div class="col-md-7 container mx-auto">
+            <ul class="list-group mx-auto">
+                {% for tarea in tareas %}
+                <li class="list-group-item list-group-item-action mx-auto">{{ tarea }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="text-center container mx-auto py-5">
+            <a class="btn btn-success" href="{{ url_for('agregar') }}"> Agregar Tarea</a>
+        </div>
+
+    </main>
+</body>
+
+</html>
