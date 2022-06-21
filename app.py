@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+from decouple import config as config_decouple
 
 app = Flask(__name__)
 
